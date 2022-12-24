@@ -1,10 +1,11 @@
-<h1>Editing log entry</h1>
+<div class="section">
+  <h1 class="title">Editing log entry</h1>
+  <%= render "form", log_entry: @log_entry %>
 
-<%= render "form", log_entry: @log_entry %>
+  <br />
 
-<br>
-
-<div>
-  <%= link_to "Show this log entry", @log_entry %> |
-  <%= link_to "Back to log entries", log_entries_path %>
+  <div>
+    <%= link_to "Show this log entry", @log_entry %> | <%= link_to "Back to log
+    entries", log_entries_path %>
+  </div>
 </div>

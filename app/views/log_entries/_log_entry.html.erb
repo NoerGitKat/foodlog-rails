@@ -29,8 +29,9 @@
     <footer class="card-footer">
       <%= link_to "Show", log_entry_path(log_entry), class: "card-footer-item"
       %> <%= link_to "Edit", edit_log_entry_path(log_entry), class:
-      "card-footer-item" %> <%= link_to "Delete", @log_entry, data: {
-      "turbo-method": :delete }, class: "card-footer-item" %>
+      "card-footer-item" %> <%= link_to "Delete", log_entry_path(log_entry),
+      data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" }, class:
+      "card-footer-item" %>
     </footer>
   </div>
 </div>

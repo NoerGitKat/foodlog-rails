@@ -1,8 +1,11 @@
-<% content_for :title do %>Foodlog &ndash; <%= DateTime.now.to_fs(:short) %> <%
-end %>
+<div class="section">
+  <% content_for :title do %>
+  <h3 class="subtitle">Today &ndash; <%= DateTime.now.to_fs(:short) %></h3>
+  <% end %>
 
-<h1 class="title">Log entries</h1>
+  <h1 class="title">Log entries</h1>
 
-<div id="log_entries" class="is-flex">
-  <% @log_entries.each do |log_entry| %> <%= render log_entry %> <% end %>
+  <div id="log_entries" class="is-flex">
+    <% @log_entries.each do |log_entry| %> <%= render log_entry %> <% end %>
+  </div>
 </div>
