@@ -1,0 +1,31 @@
+<div id="<%= dom_id log_entry %>" class="column is-one-quarter">
+  <div class="card">
+    <header class="card-header">
+      <h1></h1>
+      <p class="card-header-title"><%= log_entry.meal_type %></p>
+    </header>
+
+    <div class="card-content">
+      <div class="content">
+        <p>
+          <span class="has-text-weight-bold">Calories:</span> <%=
+          log_entry.calories %>
+        </p>
+        <p>
+          <span class="has-text-weight-bold">Proteins:</span> <%=
+          log_entry.proteins %>g
+        </p>
+        <p>
+          <span class="has-text-weight-bold">Carbohydrates:</span> <%=
+          log_entry.carbohydrates %>g
+        </p>
+        <p>
+          <span class="has-text-weight-bold">Fats:</span> <%= log_entry.fats %>g
+        </p>
+        <p class="is-italic">
+          Logged <%= time_ago_in_words(log_entry.created_at) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
