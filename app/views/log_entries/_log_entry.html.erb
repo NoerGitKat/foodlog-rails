@@ -1,11 +1,10 @@
 <div id="<%= dom_id log_entry %>" class="column is-one-quarter">
   <div class="card">
     <header class="card-header">
-      <h1></h1>
-      <p class="card-header-title"><%= log_entry.meal_type %></p>
+      <h1 class="card-header-title"><%= log_entry.meal_type %></h1>
     </header>
 
-    <div class="card-content">
+    <section class="card-content">
       <div class="content">
         <p>
           <span class="has-text-weight-bold">Calories:</span> <%=
@@ -26,6 +25,12 @@
           Logged <%= time_ago_in_words(log_entry.created_at) %>
         </p>
       </div>
-    </div>
+    </section>
+    <footer class="card-footer">
+      <%= link_to "Show", log_entry_path(log_entry), class: "card-footer-item"
+      %> <%= link_to "Edit", edit_log_entry_path(log_entry), class:
+      "card-footer-item" %> <%= link_to "Delete", @log_entry, data: {
+      "turbo-method": :delete }, class: "card-footer-item" %>
+    </footer>
   </div>
 </div>
