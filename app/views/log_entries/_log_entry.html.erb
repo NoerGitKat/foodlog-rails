@@ -1,7 +1,9 @@
 <div id="<%= dom_id log_entry %>" class="column is-one-quarter">
   <div class="card">
     <header class="card-header">
-      <h1 class="card-header-title"><%= log_entry.meal_type %></h1>
+      <h1 class="card-header-title">
+        <%= log_entry.meal_type %> | <%= log_entry.category.title if log_entry.category.present? %>
+      </h1>
     </header>
 
     <section class="card-content">

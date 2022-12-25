@@ -60,11 +60,11 @@ class LogEntriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_log_entry
-      @log_entry = LogEntry.find(params[:id])
+      @log_entry = LogEntry.find(params[:id]) 
     end
 
     # Only allow a list of trusted parameters through.
     def log_entry_params
-      params.require(:log_entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats)
+      params.require(:log_entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats, :category_id)
     end
 end

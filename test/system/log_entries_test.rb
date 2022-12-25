@@ -12,7 +12,7 @@ class LogEntriesTest < ApplicationSystemTestCase
 
   test "should create log entry" do
     visit log_entries_url
-    click_on "New log entry"
+    click_on "Create new entry"
 
     fill_in "Calories", with: @log_entry.calories
     fill_in "Carbohydrates", with: @log_entry.carbohydrates
@@ -27,7 +27,7 @@ class LogEntriesTest < ApplicationSystemTestCase
 
   test "should update Log entry" do
     visit log_entry_url(@log_entry)
-    click_on "Edit this log entry", match: :first
+    click_on "Edit", match: :first
 
     fill_in "Calories", with: @log_entry.calories
     fill_in "Carbohydrates", with: @log_entry.carbohydrates
