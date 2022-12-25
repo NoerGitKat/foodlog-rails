@@ -19,8 +19,7 @@
       <p class="notification is-link is-light"><%= notice %></p>
       <% end %> <% if alert.present? %>
       <p class="notification is-danger is-light"><%= alert %></p>
-      <% end %> <% if content_for(:title) %> <%= yield :title %> <%= yield %> <%
-      else %> <%= yield %> <% end %>
+      <% end %> <%= yield %>
     </div>
   </body>
 </html>

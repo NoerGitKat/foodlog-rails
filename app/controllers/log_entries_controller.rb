@@ -3,7 +3,7 @@ class LogEntriesController < ApplicationController
 
   # GET /log_entries or /log_entries.json
   def index
-    @log_entries = LogEntry.all
+    @log_entries = LogEntry.where("created_at >= ?", Date.today)
   end
 
   # GET /log_entries/1 or /log_entries/1.json

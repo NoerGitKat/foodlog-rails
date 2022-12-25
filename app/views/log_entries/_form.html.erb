@@ -1,15 +1,15 @@
 <%= form_with(model: log_entry) do |form| %> <% if log_entry.errors.any? %>
-<div style="color: red">
-  <h2>
-    <%= pluralize(log_entry.errors.count, "error") %> prohibited this log_entry
-    from being saved:
-  </h2>
-
-  <ul>
-    <% log_entry.errors.each do |error| %>
-    <li><%= error.full_message %></li>
-    <% end %>
-  </ul>
+<div class="message is-danger">
+  <div class="message-header">
+    <p><%= pluralize(log_entry.errors.count, "error") %> prohibited this log entry from being saved:</p>
+  </div>
+  <div class="message-body">
+    <ul>
+      <% log_entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 <% end %>
 
